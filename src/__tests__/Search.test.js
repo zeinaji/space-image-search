@@ -2,8 +2,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import Search from "../components/Search";
 
-render(<Search />);
-
 describe("Search", () => {
   xit("it renders correctly", () => {
     const { asFragment } = render(<Search />);
@@ -11,7 +9,7 @@ describe("Search", () => {
   });
 
   it("renders input box", () => {
-    //render(<Search />);
+    render(<Search />);
     document.querySelector(".search-input").value = "mockValue";
     const inputValue = screen.getByDisplayValue("mockValue");
 
